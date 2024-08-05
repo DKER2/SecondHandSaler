@@ -4,7 +4,6 @@ import com.example.SecondHandSaler.Entities.ListingItemEntity;
 import com.example.SecondHandSaler.Repositories.ListingItemRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
