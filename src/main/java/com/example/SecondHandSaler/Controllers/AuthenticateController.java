@@ -1,7 +1,7 @@
 package com.example.SecondHandSaler.Controllers;
 
 import com.example.SecondHandSaler.Payload.requests.AuthenticationRequest;
-import com.example.SecondHandSaler.Services.AuthenticationService;
+import com.example.SecondHandSaler.Services.AuthenticateService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api/authentication")
-public class AuthenticationController {
-    private final AuthenticationService authenticationService;
+@RequestMapping("/api/authenticate")
+public class AuthenticateController {
+    private final AuthenticateService authenticateService;
 
-    @PostMapping("/")
+    @PostMapping("")
     public String authenticate(@RequestBody AuthenticationRequest authenticationRequest) {
-        return authenticationService.authenticate(authenticationRequest);
+        return authenticateService.authenticate(authenticationRequest);
     }
 }
